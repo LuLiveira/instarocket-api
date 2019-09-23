@@ -13,7 +13,7 @@ mongoose.connect('mongodb+srv://lucas:lucas@cluster0-h0opw.mongodb.net/test?retr
     useNewUrlParser: true,
 });
 
-app.use((req, res) => {
+app.use((req, res, next) => {
     req.io = io;
 
     next();
